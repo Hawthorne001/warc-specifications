@@ -81,10 +81,10 @@
              <ul class="dropdown-menu" role="menu">
               <li><a href="{{ site.baseurl }}/#how-to-contribute">How to contribute</a></li>
               <li class="divider"></li>
-              <li><a href="https://github.com/iipc/warc-specifications/issues">Issues</a></li>
-              <li><a href="https://github.com/iipc/warc-specifications/pulls">Pull Requests</a></li>
+              <li><a href="{{ site.github_repository }}/issues">Issues</a></li>
+              <li><a href="{{ site.github_repository }}/pulls">Pull Requests</a></li>
               <li class="divider"></li>
-              <li><a href="https://github.com/iipc/warc-specifications">GitHub Homepage</a></li>
+              <li><a href="{{ site.github_repository }}">GitHub Homepage</a></li>
              </ul>
             </li>
           </ul>
@@ -98,11 +98,11 @@
 <div class="spec-status spec-status-{{ page.status }}">
       <span class="pull-right">
         {% if page.version-of %}
-        <a href="https://github.com/iipc/warc-specifications/labels/{{ page.version-of }}"><span class="glyphicon glyphicon-tags"></span></a>&nbsp;
+        <a href="{{ site.github_repository }}/labels/{{ page.version-of }}"><span class="glyphicon glyphicon-tags"></span></a>&nbsp;
         {% endif %}
-        <a href="https://github.com/iipc/warc-specifications/blob/gh-pages/{{ page.path }}"
+        <a href="{{ site.github_repository }}/blob/{{ site.reference_branch }}/{{ page.path }}"
 title="View this document on GitHub."><span class="glyphicon glyphicon-eye-open"></span></a>
-        <a href="https://github.com/iipc/warc-specifications/edit/gh-pages/{{ page.path }}"
+        <a href="{{ site.github_repository }}/edit/{{ site.reference_branch }}/{{ page.path }}"
 title="Edit this document on GitHub."><span class="glyphicon glyphicon-pencil"></span></a>
       </span>
 {{ page.status | capitalize }}
@@ -121,9 +121,9 @@ title="Edit this document on GitHub."><span class="glyphicon glyphicon-pencil"><
 
 {% if page.status == None %}
       <span class="pull-right" id="edit_button">
-        <a href="https://github.com/iipc/warc-specifications/blob/gh-pages/{{ page.path }}"
+        <a href="{{ site.github_repository }}/blob/{{ site.reference_branch }}/{{ page.path }}"
 title="View this document on GitHub."><span class="glyphicon glyphicon-eye-open"></span></a>
-        <a href="https://github.com/iipc/warc-specifications/edit/gh-pages/{{ page.path }}"
+        <a href="{{ site.github_repository }}/edit/{{ site.reference_branch }}/{{ page.path }}"
 title="Edit this document on GitHub."><span class="glyphicon glyphicon-pencil"></span></a>
       </span>
 {% endif %}
@@ -155,11 +155,11 @@ title="Edit this document on GitHub."><span class="glyphicon glyphicon-pencil"><
       <footer class="well">
       <span class="pull-right">
         {% if page.version-of %}
-        <a href="https://github.com/iipc/warc-specifications/labels/{{ page.version-of }}"><span class="glyphicon glyphicon-tags"></span></a>
+        <a href="{{ site.github_repository }}/labels/{{ page.version-of }}"><span class="glyphicon glyphicon-tags"></span></a>
         {% endif %}
-        <a href="https://github.com/iipc/warc-specifications/blob/gh-pages/{{ page.path }}"
+        <a href="{{ site.github_repository }}/blob/{{ site.reference_branch }}/{{ page.path }}"
 title="View this document on GitHub."><span class="glyphicon glyphicon-eye-open"></span></a>
-        <a href="https://github.com/iipc/warc-specifications/edit/gh-pages/{{ page.path }}"
+        <a href="{{ site.github_repository }}/edit/{{ site.reference_branch }}/{{ page.path }}"
 title="Edit this document on GitHub."><span class="glyphicon glyphicon-pencil"></span></a>
       </span>
         This project is maintained by members of the <a href="http://netpreserve.org/">IIPC</a>.
