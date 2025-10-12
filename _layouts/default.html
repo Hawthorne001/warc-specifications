@@ -59,7 +59,7 @@
             <li class="dropdown">
              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Primers <span class="caret"></span></a>
              <ul class="dropdown-menu" role="menu">
-{% for page in site.pages | sort:"title" %}
+{% for page in sorted_pages %}
 {% if page.type == "primer" %}
 <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}{% if page.version %} {{ page.version }}{% endif %}</a></li>
 {% endif %}
@@ -69,7 +69,7 @@
             <li class="dropdown">
              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Guidelines <span class="caret"></span></a>
              <ul class="dropdown-menu" role="menu">
-{% for page in site.pages | sort:"title" %}
+{% for page in sorted_pages %}
 {% if page.type == "guidelines" %}
 <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}{% if page.version %} {{ page.version }}{% endif %}</a></li>
 {% endif %}
