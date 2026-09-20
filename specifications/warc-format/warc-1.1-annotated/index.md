@@ -271,6 +271,14 @@ extra line with at least one space or tab character.
 > **Community recommendation:**  [#74](https://github.com/iipc/warc-specifications/issues/74)
 > Do not write WARC files with header fields spanning multiple lines.
 
+> **Community errata:** [#116](https://github.com/iipc/warc-specifications/issues/116)
+> The grammar of `warc-fields` repeats incorrectly. This
+> error was inherited from HTTP and has since been corrected by
+> [RFC 2616](https://www.rfc-editor.org/info/rfc2616/#section-4.1) as
+> follows.
+>
+>     warc-fields  = *( named-field CRLF )
+
 Named fields may appear in any order and field values may contain any
 UTF-8 character. Both defined- fields and extension-fields follow the
 generic named-field format. Extension-fields may be used in extensions
